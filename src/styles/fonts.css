@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=Sora:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@1,500;1,600&display=swap");
+
+:root {
+  --font-heading: "Sora", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading-alt: "Poppins", "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", "Playfair Display", cursive;
+  --font-serif-italic: "Playfair Display", Georgia, serif;
+
+  /* Type scale (desktop) */
+  --fs-hero: 64px;
+  --fs-section: 48px;
+  --fs-sub: 32px;
+  --fs-card: 24px;
+  --fs-body: 18px;
+  --fs-small: 14px;
+  --fs-button: 16px;
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.2;
+  --lh-normal: 1.55;
+
+  --tracking-hero: -2px;
+  --tracking-section: -1px;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.16em;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-normal);
+  color: #1F2937;
+  background: #F8F9FC;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  /* color intentionally inherits — dark sections (text-white) must remain readable */
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-snug);
+}
+
+h1 {
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  letter-spacing: var(--tracking-hero);
+  line-height: var(--lh-tight);
+}
+h2 {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  letter-spacing: var(--tracking-section);
+}
+h3 {
+  font-size: var(--fs-sub);
+  font-weight: 600;
+}
+h4 {
+  font-size: var(--fs-card);
+  font-weight: 600;
+}
+h5 { font-size: 20px; font-weight: 600; }
+h6 { font-size: 18px; font-weight: 600; }
+
+p {
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-normal);
+  /* color intentionally inherits so paragraphs inside dark sections stay legible */
+}
+
+button, .btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+label, input, textarea, select {
+  font-family: var(--font-body);
+}
+
+small, .text-small {
+  font-size: var(--fs-small);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Responsive scaling — headings shrink gracefully on tablet & mobile */
+@media (max-width: 1024px) {
+  h1 { font-size: 52px; letter-spacing: -1.5px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 28px; }
+}
+@media (max-width: 640px) {
+  :root { --fs-body: 16px; }
+  h1 { font-size: 40px; letter-spacing: -1px; line-height: 1.1; }
+  h2 { font-size: 32px; letter-spacing: -0.5px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  p { font-size: 16px; }
+}
+
+/* Specialized typography utilities */
+.text-stat {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 56px);
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #1F2937;
+}
+
+.text-doctor-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.text-department-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.text-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.text-serif-italic {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.text-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}

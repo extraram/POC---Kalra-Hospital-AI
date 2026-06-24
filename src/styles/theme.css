@@ -1,0 +1,276 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Kalra Hospitals brand palette */
+  --background: #F8F9FC;
+  --foreground: #1F2937;
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+  --popover: #FFFFFF;
+  --popover-foreground: #1F2937;
+  /* Primary — Deep Medical Purple */
+  --primary: #4B2C73;
+  --primary-foreground: #FFFFFF;
+  --primary-light: #6D4AA3;
+  /* Secondary — Healthcare Burgundy */
+  --brand-secondary: #9B1238;
+  /* Accent — Modern Medical Red */
+  --brand-accent: #C81E4A;
+  /* AI signal tokens now map onto the brand so .ai-* utilities stay on-brand */
+  --ai-teal: #6D4AA3;
+  --ai-teal-soft: #F1ECF8;
+  --ai-teal-foreground: #2E1B49;
+  --ai-indigo: #4B2C73;
+  --ai-indigo-soft: #F1ECF8;
+  --ai-indigo-foreground: #2E1B49;
+  --secondary: #F1ECF8;
+  --secondary-foreground: #4B2C73;
+  /* Brand gradients */
+  --gradient-hero: linear-gradient(135deg, #4B2C73 0%, #6D4AA3 100%);
+  --gradient-primary-btn: linear-gradient(135deg, #9B1238 0%, #C81E4A 100%);
+  /* Card shadow */
+  --shadow-card: 0 10px 30px rgba(75, 44, 115, 0.08);
+  --muted: #F1ECF8;
+  --muted-foreground: #6B7280;
+  --accent: #C81E4A;
+  --accent-foreground: #FFFFFF;
+  --destructive: #C81E4A;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-ai-teal: var(--ai-teal);
+  --color-ai-teal-soft: var(--ai-teal-soft);
+  --color-ai-teal-foreground: var(--ai-teal-foreground);
+  --color-ai-indigo: var(--ai-indigo);
+  --color-ai-indigo-soft: var(--ai-indigo-soft);
+  --color-ai-indigo-foreground: var(--ai-indigo-foreground);
+  --color-primary-light: var(--primary-light);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  /* Typography defaults are owned by src/styles/fonts.css */
+}
+
+@layer utilities {
+  /* Glassmorphism surfaces for AI features.
+     .ai-glass — light frosted card (works on light or imagery backgrounds)
+     .ai-glass-dark — tinted toward the navy brand for headers/footers
+     .ai-glow — layered teal/indigo glow ring used to spotlight AI surfaces */
+  .ai-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.72) 0%,
+      rgba(238, 240, 255, 0.55) 100%
+    );
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.7) inset,
+      var(--shadow-card);
+  }
+
+  .ai-glass-dark {
+    background: linear-gradient(
+      135deg,
+      rgba(75, 44, 115, 0.92) 0%,
+      rgba(109, 74, 163, 0.85) 100%
+    );
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+  }
+
+  .brand-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-primary-gradient {
+    background: var(--gradient-primary-btn);
+    color: #fff;
+    transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+    box-shadow: 0 8px 20px -6px rgba(200, 30, 74, 0.45);
+  }
+  .btn-primary-gradient:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+    box-shadow: 0 12px 28px -8px rgba(200, 30, 74, 0.55);
+  }
+
+  .ai-glow {
+    position: relative;
+  }
+  .ai-glow::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      var(--ai-teal) 0%,
+      var(--ai-indigo) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  .ai-glow::after {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    z-index: -1;
+    background:
+      radial-gradient(40% 50% at 15% 20%, rgba(109, 74, 163, 0.28), transparent 70%),
+      radial-gradient(40% 50% at 85% 80%, rgba(200, 30, 74, 0.22), transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  /* Responsive layout helpers */
+  .container-x {
+    width: 100%;
+    max-width: 80rem; /* 1280px */
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) { .container-x { padding-inline: 1.5rem; } }
+  @media (min-width: 1024px) { .container-x { padding-inline: 2rem; } }
+
+  .section-y {
+    padding-block: 3rem; /* mobile */
+  }
+  @media (min-width: 768px) { .section-y { padding-block: 4.5rem; } }
+  @media (min-width: 1024px) { .section-y { padding-block: 6rem; } }
+
+  .ai-chip {
+    background: linear-gradient(
+      135deg,
+      var(--ai-teal-soft) 0%,
+      var(--ai-indigo-soft) 100%
+    );
+    color: var(--ai-indigo-foreground);
+    border: 1px solid rgba(99, 102, 241, 0.18);
+  }
+}
