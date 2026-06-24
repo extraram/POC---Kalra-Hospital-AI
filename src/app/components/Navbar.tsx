@@ -77,7 +77,8 @@ export function Navbar() {
     : "bg-white/85 backdrop-blur-md";
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${headerClasses}`}>
+    <>
+      <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${headerClasses}`}>
       {/* Top contact strip — desktop only, hides on scroll */}
       <div
         className={`hidden lg:block border-b border-[#E5E7EB] overflow-hidden transition-all duration-300 ${
@@ -241,8 +242,10 @@ export function Navbar() {
           </button>
         </div>
       </div>
+      </header>
 
-      {/* Mobile backdrop */}
+      {/* Mobile backdrop — sibling of <header> so the header's backdrop-filter
+          doesn't trap these fixed elements in a 0-height containing block */}
       <div
         onClick={() => setMobileMenuOpen(false)}
         aria-hidden="true"
@@ -389,6 +392,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

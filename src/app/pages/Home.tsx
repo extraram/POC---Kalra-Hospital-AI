@@ -6,17 +6,27 @@ import { SymptomChecker } from "../components/home/SymptomChecker";
 import { PackagesAndStories } from "../components/home/PackagesAndStories";
 import { EmergencyAndInternational } from "../components/home/EmergencyAndInternational";
 import { ArticlesAndPartners } from "../components/home/ArticlesAndPartners";
+import { Reveal } from "../components/Reveal";
 
 export function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Hero, Stats, Specialties & ArticlesAndPartners animate internally. */}
       <Hero />
       <Stats />
       <Specialties />
-      <FindYourDoctor />
-      <SymptomChecker />
-      <PackagesAndStories />
-      <EmergencyAndInternational />
+      <Reveal>
+        <FindYourDoctor />
+      </Reveal>
+      <Reveal>
+        <SymptomChecker />
+      </Reveal>
+      <Reveal>
+        <PackagesAndStories />
+      </Reveal>
+      <Reveal>
+        <EmergencyAndInternational />
+      </Reveal>
       <ArticlesAndPartners />
     </div>
   );
