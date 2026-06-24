@@ -1,7 +1,4 @@
 
-  # Hospital Website Revamp
-
-  This is a code bundle for Hospital Website Revamp. The original project is available at https://www.figma.com/design/fXIP2cpqpjTNgpaGCUcZ8e/Hospital-Website-Revamp.
 
   ## Running the code
 
